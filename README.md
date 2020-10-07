@@ -4,9 +4,9 @@
 
 Installation d'un serveur Proxmox et d'un cluster de machines virtuelles grace à Ansible
 
-Intégration d'un Heartbeat et le Fail2ban au deux machines push précedement 
+Intégration d'un Heartbeat pour  et le Fail2ban au deux machines push précedement 
 
-Intégration d'un serveur Syslog et de deux autres VM avec des bases de données répliqués 
+Intégration d'un serveur Syslog pour la centralisation des logs et de deux autres VM avec des bases de données répliqués 
 
 Ajout d'un proxy
 
