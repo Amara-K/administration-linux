@@ -8,12 +8,18 @@ Faire des push recurent sur GIT
 
 ----Avancé du projet-----
 
-Installation du Proxmox     Fait
-Mise en place d'Ansible     en cours          
+Installation du Proxmox     Fait 
+
+Mise en place d'Ansible     en cours 
+
 Push des deux mv            à voir
+
 Ip virtuelle et Heartbeat   à voir
-Fail2ban                    à voir  
+
+Fail2ban                    à voir 
+
 Push Syslog                 à voir
+
 Push 2 Mv pour les BDD      à voir
 
 ---Membre du groupes----
