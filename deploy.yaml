@@ -1,0 +1,80 @@
+- hosts: all
+  tasks :
+
+#Deploy des MV avec config et ISO Ubuntu
+
+     - name : "DeployVM1"
+       proxmox_kvm:
+          api_user     : root@pam
+          api_password : Prox2020
+          api_host     : 192.168.31.128
+          name         : deploy1
+          node         : prox13
+          cores        : 2
+          vcpus        : 2
+          memory       : 2048
+          ide          : '{"ide0":"local:iso/ubuntu-18.04.3-live-server-amd64.iso,media=cdrom"}'
+          net          : '{"net0":"virtio,bridge=vmbr0,rate=200"}'
+          virtio       : '{"scsi0":"Alldisk:20,format=raw"}'
+          autostart    : yes
+
+  
+     - name : "DeployVM2"
+       proxmox_kvm:
+          api_user     : root@pam
+          api_password : Prox2020
+          api_host     : 192.168.31.128
+          name         : deploy2
+          node         : Prox13
+          memory       : 2048
+          cores        : 2
+          vcpus        : 2
+          ide          : '{"ide0":"local:iso/ubuntu-18.04.3-live-server-amd64.iso,media=cdrom"}'
+          net          : '{"net0":"virtio,bridge=vmbr0,rate=200"}'
+          virtio       : '{"scsi0":"Alldisk:20,format=raw"}'
+          autostart    : yes
+
+
+     - name : "DeployVM3"
+       proxmox_kvm:
+          api_user     : root@pam
+          api_password : Prox2020
+          api_host     : 192.168.31.128
+          name         : deploy3
+          node         : Prox-13
+          memory       : 2048
+          cores        : 2
+          vcpus        : 2
+          ide          : '{"ide0":"local:iso/ubuntu-18.04.3-live-server-amd64.iso,media=cdrom"}'
+          net          : '{"net0":"virtio,bridge=vmbr0,rate=200"}'
+          virtio       : '{"scsi0":"Alldisk:20,format=raw"}'
+          autostart    : yes
+
+#reveil des machines précedement créee
+
+     - name : "PowerOn1"
+       proxmox_kvm:
+          api_user     : root@pam
+          api_password : Prox2020
+          api_host     : 192.168.31.128
+          name         : deploy1
+          node         : prox13
+          state        : started
+
+     - name : "PowerOn2"
+       proxmox_kvm:
+          api_user     : root@pam
+          api_password : Prox2020
+          api_host     : 192.168.31.128
+          name         : deploy2
+          node         : Prox13
+          state        : started
+
+     - name : "PowerOn3"
+       proxmox_kvm:
+          api_user     : root@pam
+          api_password : Prox2020
+          api_host     : 192.168.31.128
+          name         : deploy3
+          node         : Prox-13
+          state        : started
