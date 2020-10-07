@@ -10,7 +10,9 @@ Intégration d'un serveur Syslog pour la centralisation des logs et de deux autr
 
 Ajout d'un proxy
 
-Faire des push recurent sur GIT
+Faire des push recurent sur GIT.
+
+Des tests de pentest à réaliser sur notre architecture SI.
 
 
 ----Avancé du projet-----
@@ -29,6 +31,8 @@ Fail2ban                    à voir
 Push Syslog                 à voir
 
 Push 2 Mv pour les BDD      à voir
+
+Test Pentest                à voir         
 
 
 ---Membre du groupe----
