@@ -1,0 +1,8 @@
+---
+- host: all
+  remote_user: root
+
+   etc:
+     - ansible
+
+...
