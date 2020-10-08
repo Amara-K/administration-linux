@@ -1,0 +1,16 @@
+- name: Installation syslog et configuration
+  hosts: syslog
+  remote_user: root
+  tasks:
+    - name: apt update
+      apt: update_cache=yes
+    - name: Installer syslog
+      apt: name=syslog-ng state=latest
+    - name: ensure syslog-ng is running (and enable it at boot)
+      service: name=syslog-ng state=started enabled=yes
+    - name: fichier de configuration a copier
+      copy:
+       src: remote_source.conf
+       dest: /etc/syslog-ng/conf.d/
+    - name: restart syslog-ng
+      service: name=syslog-ng state=restarted
