@@ -1,0 +1,19 @@
+- name: deploiement serveur web
+  hosts: webserver
+  remote_user: root
+  tasks:
+    - name: apt update
+      apt: update_cache=yes
+    - name: Installer apache2
+      apt: name=apache2 state=latest
+    - name: verifier que apache2 est en route
+      service: name=apache2 state=started enabled=yes
+    - shell: /bin/rm -rf /etc/hosts
+    - name: fichier de configuration a copier
+      copy:
+       src: webserver/hosts
+       dest: /etc/
+    - name: restart apache2
+      service: name=apache2 state=restarted
+    - name: verifier que apache2 est en route
+      service: name=apache2 state=started enabled=yes
