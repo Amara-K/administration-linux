@@ -2,8 +2,8 @@
 192.168.211.120
 
 [webserver]
-192.168.211.135 ha_node=webserver1
-192.168.211.136 ha_node=webserver2
+192.168.211.135 ha_node=webserveur1
+192.168.211.136 ha_node=webserveur2
 
 [webserver:vars]
 ha_virtual_ip=192.168.211.140
