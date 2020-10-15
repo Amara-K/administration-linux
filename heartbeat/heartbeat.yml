@@ -9,7 +9,7 @@
 
   - name: envoie des fichiers de configurations
     copy:
-      src: src/{{ item }}
+      src: config/{{ item }}
       dest: /etc/ha.d/{{ item }}
       loop:
         - ha.cf
