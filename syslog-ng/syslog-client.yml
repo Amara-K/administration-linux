@@ -1,5 +1,5 @@
 - name: Installation syslog et configuration
-  hosts: syslog-client
+  hosts: all
   remote_user: root
   tasks:
     - name: apt update
