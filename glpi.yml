@@ -1,0 +1,34 @@
+---
+- hosts: GLPIsrv
+  become: true
+
+  tasks:
+  - name: install Apache2 et PHP
+    apt:
+      name:
+        - apache2
+        - php
+        - php-mysql
+        - libapache2-mod-php
+        - php-curl
+        - php-mbstring
+        - php-xml
+        - php-gd
+        - php-mysql
+        - php-json
+        - php-intl
+      state: present
+      update_cache: yes
+
+  - name: Téléchargement de GLPI
+    get_url:
+      url: https://github.com/glpi-project/glpi/releases/download/9.5.2/glpi-9.5.2.tgz
+      dest: /tmp/
+
+  - name: Extraction de l'archive GLPI
+    command: tar -xzvf glpi-9.5.2.tgz -C /var/www/html
+    args:
+      chdir: /tmp/
+
+  - name: Droits
+    command: chown -R www-data /var/www/html/glpi/
