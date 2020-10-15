@@ -1,0 +1,1 @@
+{{ ha_remote_node }} IPaddr::{{ ha_virtual_ip }} apache2
