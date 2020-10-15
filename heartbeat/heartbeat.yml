@@ -20,12 +20,6 @@
       path: /etc/ha.d/authkeys
       mode: '0600'
 
-  - name: start 
-    command: systemctl start heartbeat.service
-
-  - name: enabled heartbeat service
-    command: systemctl enable heartbeat.service
-
  - name: restart heartbeat service
       service: name=heartbeat state=restarted
  
