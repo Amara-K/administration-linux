@@ -1,5 +1,5 @@
----
-- hosts: webserver
+- name: deploiement serveur web
+  hosts: webserver
   become: true
 
   tasks:
@@ -20,8 +20,14 @@
       path: /etc/ha.d/authkeys
       mode: '0600'
 
-  - name: start heartbeat service
+  - name: start 
     command: systemctl start heartbeat.service
 
   - name: enabled heartbeat service
     command: systemctl enable heartbeat.service
+
+ - name: restart heartbeat service
+      service: name=heartbeat state=restarted
+ 
+ - name: verifier que heartbeat est en route
+      service: name=heartbeat state=started enabled=yes 
