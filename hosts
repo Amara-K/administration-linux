@@ -6,7 +6,7 @@
 192.168.211.136 ha_node=webserver2
 
 [webserver:vars]
-ha_virtualip=192.168.211.140
+ha_virtual_ip=192.168.211.140
 
 [sqlserver]
 192.168.211.130
