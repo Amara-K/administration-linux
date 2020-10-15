@@ -1,4 +1,4 @@
-- name: Installation syslog et configuration
+- name: Configuration système
   hosts: all
   remote_user: root
   tasks:
@@ -14,3 +14,8 @@
        dest: /etc/syslog-ng/conf.d/
     - name: restart syslog-ng
       service: name=syslog-ng state=restarted
+    - name: installer fail2ban
+      apt: name=fail2ban state=latest
+    - name: ensure fail2ban is running (and enable it at boot)
+      service: name=fail2ban state=started enabled=yes
+    
