@@ -1,0 +1,27 @@
+---
+- hosts: webserver
+  become: true
+
+  tasks:
+  - name: install heartbeat
+    apt:
+      name: heartbeat
+
+  - name: envoie des fichiers de configurations
+    copy:
+      src: src/{{ item }}
+      dest: /etc/ha.d/{{ item }}
+      loop:
+        - ha.cf
+        - authkeys
+
+  - name: donner les droits au fichier authkeys
+    file:
+      path: /etc/ha.d/authkeys
+      mode: '0600'
+
+  - name: start heartbeat service
+    command: systemctl start heartbeat.service
+
+  - name: enabled heartbeat service
+    command: systemctl enable heartbeat.service
