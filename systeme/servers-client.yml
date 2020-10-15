@@ -1,1 +1,25 @@
-
+- name: Configuration système
+  hosts: all
+  remote_user: root
+  tasks:
+    - name: apt update
+      apt: update_cache=yes
+    - name: Installer syslog
+      apt: name=syslog-ng state=latest
+    - name: ensure syslog-ng is running (and enable it at boot)
+      service: name=syslog-ng state=started enabled=yes
+    - name: fichier de configuration a copier
+      copy:
+       src: syslog_client.conf
+       dest: /etc/syslog-ng/conf.d/
+    - name: restart syslog-ng
+      service: name=syslog-ng state=restarted
+    - name: installer fail2ban
+      apt: name=fail2ban state=latest
+    - name: ensure fail2ban is running (and enable it at boot)
+      service: name=fail2ban state=started enabled=yes
+    - shell: /bin/rm -rf /etc/fail2ban/jail.d/defaults-debian.conf
+    - name: fichier de configuration a copier
+      copy:
+       src: defaults-debian.conf
+       dest: /etc/fail2ban/jail.d/
