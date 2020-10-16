@@ -2,17 +2,15 @@
 
 -----Résumé-----
 
-Installation d'un serveur Proxmox et d'un cluster de machines virtuelles grace à Ansible
+
 
 Intégration d'un Heartbeat pour  et le Fail2ban au deux machines push précedement 
 
 Intégration d'un serveur Syslog pour la centralisation des logs et de deux autres VM avec des bases de données répliqués 
 
-Ajout d'un proxy
 
 Faire des push recurent sur GIT.
 
-Des tests de pentest à réaliser sur notre architecture SI.
 
 
 ----Avancé du projet-----
@@ -20,17 +18,17 @@ Des tests de pentest à réaliser sur notre architecture SI.
 
 Installation du Proxmox     Fait 
 
-Mise en place d'Ansible     en cours 
+Mise en place d'Ansible     fait
 
-Push des deux mv            à voir
+Push des deux mv            fait
 
-Ip virtuelle et Heartbeat   à voir
+Ip virtuelle et Heartbeat   fait
 
-Fail2ban                    à voir 
+Fail2ban                    fait
 
-Push Syslog                 à voir
+Push Syslog                 fait
 
-Push 2 Mv pour les BDD      à voir
+Push 2 Mv pour les BDD      fait
 
 Test Pentest                à voir         
 
