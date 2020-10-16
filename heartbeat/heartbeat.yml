@@ -18,7 +18,7 @@
  - name: envoi du fichier haressources
    template:
      src: config/harresources
-     dst: /etc.ha.d/haressources
+     dst: /etc/ha.d/haressources
   
   - name: donner les droits au fichier authkeys
     file:
