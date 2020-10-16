@@ -19,7 +19,7 @@ Des tests de pentest à réaliser sur notre architecture SI.
 
 Mise en place d'Ansible     en cours 
 
-serveur Syslog from scratch  Fait.
+serveur Syslog from scratch  Fait
 
 serveur web from scratch     Fait
 
