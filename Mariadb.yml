@@ -1,5 +1,5 @@
 ---
-- hosts: Mariadb
+- hosts: mariadb-server
   become: true
   vars:
     mysql_root_password: linux
