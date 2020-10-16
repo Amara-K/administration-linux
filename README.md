@@ -2,7 +2,7 @@
 
 -----Résumé-----
 
-Installation d'un serveur Proxmox et d'un cluster de machines virtuelles grace à Ansible
+Installation d'un cluster de machines virtuelles grace à Ansible
 
 Intégration d'un Heartbeat pour  et le Fail2ban au deux machines push précedement 
 
