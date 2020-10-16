@@ -6,4 +6,4 @@ Ce fichier on l'utilise car nous n'avons pas mis en place de serveur dns
 
 - modifier le fichier webserver/hosts avec les bons adresses ip et les noms des machines car ce fichier remplace celui qui est par défaut sur les serveurs.
 
-- modifier les adresse ip dans le fichiers "hosts" qui est utiliser par ansible pour le déploiement.
+
