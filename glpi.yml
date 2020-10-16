@@ -1,5 +1,5 @@
 ---
-- hosts: GLPIsrv
+- hosts: webserver
   become: true
 
   tasks:
