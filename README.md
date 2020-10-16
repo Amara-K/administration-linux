@@ -21,7 +21,7 @@ Mise en place d'Ansible     en cours
 
 serveur Syslog from scratch  Fait
 
-serveur web from scratch     Fait.
+serveur web from scratch     Fait
 
 ip.vip et Heartbeat          Fait
 
