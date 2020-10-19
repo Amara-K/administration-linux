@@ -2,7 +2,7 @@
 192.168.211.120
 
 [syslog-client:vars]
-syslog_server=192.168.211.120
+server_syslog=192.168.211.120
 
 [webserver]
 192.168.211.135 ha_remote_node=webserveur1
