@@ -1,3 +1,6 @@
+[syslog-server]
+192.168.211.120
+
 [syslog-client:vars]
 server_syslog=192.168.211.120
 
